@@ -1,0 +1,67 @@
+/**
+ * This file defines a dynamic 'accordion' layout for use in WP Admin pages.
+ */
+
+.obson-full-width {
+    width: 100%;
+}
+
+.accordion {
+    width: 100%;
+}
+
+.accordion > label {
+    display: block;
+}
+
+.accordion > input {
+    display: none;
+}
+
+.accordion > div {
+    height: 0;
+    overflow: hidden;
+}
+
+.accordion > input:checked + label + div {
+    height: 500px;
+}
+
+.accordion > div > * {
+    margin: 10px;
+}
+
+.accordion > input:checked + label {
+    background-color: green;
+}
+
+.accordion > label {
+    background-color: gray;
+    border: 1px solid gray;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 4px 10px;
+    text-transform: uppercase;
+}
+
+.accordion > div {
+    margin-bottom: 1px;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    -webkit-transition: all linear 500ms;
+    -moz-transition: all linear 500ms;
+    -o-transition: all linear 500ms;
+    transition: all linear 500ms;
+}
+
+/**
+ * POSSIBLE MODIFICATIONS
+ *
+ * For Safari compatibility (probably no longer needed):
+ *
+ * body { -webkit-animation: bugfix infinite 2s; }
+ * @-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
+ *
+ */
