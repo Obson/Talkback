@@ -149,6 +149,13 @@ $main_title = $post->post_title;
 // Get arguments for Not Available message and for parameterised stylesheet
 $meta_values = get_post_meta( $post->ID, '', true );
 
+// Send a tracking email for testing
+if ( $meta_values[ 'obson_offers_mode' ][ 0 ] == 'test' ) {
+	$timestamp = date( 'H:i:s', gmdate( 'U' ) );
+	$msg = __FILE__ . ' has been accessed via http://obson.net at ' . $timestamp . ' GMT';
+	wp_mail( 'david@cowlstreetpress.co.uk', 'Obson Talkback Access', $msg );
+}
+
 // Set 'Not Available' message if appropriate
 check_availability( $meta_values['obson_offers_mode'][0] );
 
