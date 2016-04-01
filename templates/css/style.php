@@ -68,6 +68,7 @@ p {
 }
 
 #innerbox-1 {
+    box-sizing: border-box;
     width: 400px;
     height: auto;
     padding: 20px 0;
@@ -85,6 +86,7 @@ p {
 }
 
 #innerbox-2 {
+    box-sizing: border-box;
     width: 540px;
     padding: 20px;
     position: absolute;
@@ -179,9 +181,10 @@ a.of-text-link:hover {
 }
 
 .of-input {
+    box-sizing: border-box;
     margin-top:2px;
     margin-bottom: 2px;
-    width: 96%;
+    width: 100%;
     font-size: 1rem;
     padding: 7px;
     color: black;
@@ -189,11 +192,16 @@ a.of-text-link:hover {
     font-weight: normal;
 }
 
+textarea.of-input {
+    width: 96%;
+}
+
 .short{
     width: 3em;
 }
 
 .of_bordered {
+    box-sizing: border-box;
     border: 1px solid #666;
     padding 5px;
     background-color: white;
