@@ -788,7 +788,7 @@ function obson_meta_box_questions() {
                 'lead-magnet' (from your WordPress Media Library) to reward
                 the respondent for completing the survey. This will be sent
                 as an attachment to the thank-you email. <b>Caution: you must
-                    be able to send emails from your server for this to work.</b></p>
+                be able to send emails from your server for this to work.</b></p>
 
             <table width="98%">
                 <tr>
@@ -1123,14 +1123,10 @@ function obson_end_session() {
     session_destroy();
 }
 
-/**
- * Change the email-from name from WordPress to Obson.
- * Note: This should really be user-defined (later).
- */
-function obson_mail_name( $name ) {
-    return 'obson'; // new email name from sender.
+function obson_mail_name($name)
+{
+    return 'Survey';
 }
-
 add_filter( 'wp_mail_from_name', 'obson_mail_name' );
 
 /**
