@@ -307,7 +307,7 @@ if ( $show == 0 ) {
 	} else if ( isset( $_POST['own_words'] ) &&
 	            in_array( $_POST['own_words'], $edit_types )
 	) {
-		$text_response           = isset( $_POST['text_response'] )
+		$text_response = isset( $_POST['text_response'] )
 			? esc_attr( $_POST['text_response'] )
 			: '';
 		$answer['text_response'] = $text_response;

@@ -787,7 +787,8 @@ function obson_meta_box_questions() {
                 respondent; you can change the wording below. Choose a
                 'lead-magnet' (from your WordPress Media Library) to reward
                 the respondent for completing the survey. This will be sent
-                as an attachment to the thank-you email.</p>
+                as an attachment to the thank-you email. <b>Caution: you must
+                    be able to send emails from your server for this to work.</b></p>
 
             <table width="98%">
                 <tr>
